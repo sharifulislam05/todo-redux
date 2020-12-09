@@ -1,0 +1,38 @@
+@use '../AddToDo/addToDo';
+@use '../../style//color';
+
+.task {
+  width: 50%;
+  height: 50px;
+  padding-top: 5px;
+  box-shadow: 0 0 3px color.$shadow;
+  border-radius: 5px;
+}
+
+.item__content {
+  width: 50%;
+}
+
+.item-btn {
+  @extend %border-remove;
+  background: none !important;
+}
+
+.item__edit {
+  background: none;
+  margin-left: 5px;
+  &:focus {
+    background: none;
+  }
+}
+
+.item-complete {
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 600px) {
+  .task {
+    padding: 0px;
+    width: 100%;
+  }
+}

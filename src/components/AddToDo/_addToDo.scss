@@ -1,0 +1,38 @@
+@use '../../style/color';
+
+%border-remove {
+  outline: none !important;
+  border: none;
+  height: 50px;
+}
+
+.add-todo {
+  width: 50%;
+}
+
+.input__todo--add {
+  @extend %border-remove;
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.btn__todo--add {
+  @extend %border-remove;
+  width: 120px;
+  border-radius: 10px;
+  background: color.$btn-color;
+  color: color.$btn-text;
+}
+
+@media only screen and (max-width: 600px) {
+  .input__todo--add {
+    width: 100%;
+  }
+  .btn__todo--add {
+    width: 80px;
+    height: 40px;
+    margin-top: 5px;
+  }
+}
